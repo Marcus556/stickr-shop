@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import WebPage from './webpage.component';
-import './webpage.styles.scss';
+import WebPage from './pages/webpage/webpage.component';
+import './pages/webpage/webpage.styles.scss';
 function App() {
   return (
     <div>
