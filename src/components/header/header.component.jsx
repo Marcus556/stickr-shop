@@ -10,13 +10,13 @@ const Header = ({currentUser}) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo'/>
-      <span className='logo-name'>Sticker Shop</span>
+      <span className='logo-name'>Stickr Shop</span>
     </Link>
     <div className='header-menu'>
     <Link className='header-menu-item' to='/shop'>
       SHOP
     </Link>
-    <Link className='header-menu-item' to='/shop'>
+    <Link className='header-menu-item' to='/contact'>
       CONTACT
     </Link>
     {!currentUser ? (
