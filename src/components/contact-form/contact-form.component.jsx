@@ -3,6 +3,7 @@ import FormInput from '../form-input/form-input.component'
 import TextArea from '../text-area/text-area.component'
 import CustomButton from '../custom-button/custom-button.component'
 import './contact-form.styles.scss'
+import { Spring } from 'react-spring/renderprops';
 
 
 export default class ContactForm extends Component {
@@ -12,7 +13,8 @@ export default class ContactForm extends Component {
     this.state={
       name: '',
       email: '',
-      message:''
+      message:'',
+      messageSent: false
     }
   }
   handleChange = event => {
@@ -22,13 +24,30 @@ export default class ContactForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    this.setState({name: '', email: '', message: ''})
+    this.setState({name: '', email: '', message: '', messageSent: true})
   }
 
   render(){
-    const {name, email, message} = this.state;
+    const {name, email, message, messageSent} = this.state;
     return (
+
       <div className='contact-form'>
+        {messageSent ? 
+        (<Spring
+        from={{ opacity: 0}}
+        to={{ opacity: 1}}
+        >
+        {props => (
+        <div style={props}>
+          <div className='success-msg'>
+            <h2>Success!</h2>
+            <span>Your message was sent!</span>
+          </div>
+        </div>
+        )}
+      </Spring>)
+        : (
+        <div>
         <h1>Contact Us</h1>
         <span>Use the form below to contact us.</span>
         <form onSubmit={this.handleSubmit}>
@@ -60,9 +79,14 @@ export default class ContactForm extends Component {
           />
         <CustomButton type='submit'>Send!</CustomButton>
         </form>
+        </div>)
+      }
 
       </div>
     )
   }
 
 }
+
+
+
