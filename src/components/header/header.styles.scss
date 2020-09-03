@@ -35,11 +35,21 @@
       cursor: pointer;
     }
   }
-  @media screen and (max-width: 820px) {
-    .header-menu{
-      display: none;
-    }
-  }
 }
 
+@media screen and (max-width: 820px) {
+  .header{
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .header-menu {
+    justify-content: space-between;
+    width: 100%;
 
+    .header-menu-item {
+      font-size: 12px;
+    }
+  }
+ 
+
+}

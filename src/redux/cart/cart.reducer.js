@@ -1,21 +1,27 @@
 import { CartActionTypes } from './cart.types'
-
+import {addItemToCart} from './cart.utils'
+//setting initial state
 const INITIAL_STATE = {
   toggleCart: false,
-  cartCount: '0'
+  cartItems: [],
 }
+
+//cart reducer
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    //toggles state of toggleCart, true or false.
     case CartActionTypes.TOGGLE_CART_COMPONENT:
       return {
         ...state, 
         toggleCart: !state.toggleCart
-      }
-      case CartActionTypes.SET_CART_COUNT:
+      };
+      //Adds payload into cartItems
+      case CartActionTypes.ADD_CART_ITEM:
         return {
           ...state, 
-          cartCount: ++state.cartCount
+          cartItems: addItemToCart(state.cartItems, action.payload)
         }
+
 
     default:
       return state;
@@ -24,3 +30,4 @@ const cartReducer = (state = INITIAL_STATE, action) => {
 }
 
 export default cartReducer;
+

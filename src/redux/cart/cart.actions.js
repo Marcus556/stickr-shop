@@ -7,8 +7,15 @@ export const toggleCart = () => {
   }
 }
 
-export const setCartCount = () => {
+export const addCartItem = (item) => {
   return {
-    type: CartActionTypes.SET_CART_COUNT
+    type: CartActionTypes.ADD_CART_ITEM,
+    payload: item
+  }
+}
+
+export const getCartLength = () => {
+  return {
+    type: CartActionTypes.GET_CART_LENGTH
   }
 }
