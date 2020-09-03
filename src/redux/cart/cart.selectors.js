@@ -8,6 +8,11 @@ export const selectCartItems = createSelector(
   (cart) =>cart.cartItems
 )   
 
+export const selectCartToggleCart = createSelector(
+  [selectCart],
+  cart => cart.toggleCart
+)
+
 export const selectCartItemsCount = createSelector(
   [selectCartItems],
   cartItems =>
