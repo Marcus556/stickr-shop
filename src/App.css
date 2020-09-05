@@ -7,6 +7,15 @@ body {
   padding: 20px 60px;
   color: #414141;
 }
+body::-webkit-scrollbar {
+  width: 14px;
+}
+body::-webkit-scrollbar-track {
+  background: none;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(37, 37, 42);    /* color of the scroll thumb */
+}
 
 a {
   text-decoration: none;
