@@ -4,7 +4,7 @@ import PreviewItem from '../preview-item/preview-item.component';
 
 
 
-const PreviewCollection = ({title, items}) => (
+const PreviewCollection = ({title, items, history}) => (
   <div className='collection-preview'>
     <h1 className='title'>{title.toUpperCase()}</h1>
     <div className='preview'>

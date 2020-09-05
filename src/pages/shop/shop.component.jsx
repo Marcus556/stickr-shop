@@ -1,21 +1,13 @@
 import React, {Component} from 'react';
-import SHOP_DATA from './shop.data.js';
-import PreviewCollection from '../../components/preview-collection/preview-collection.component'
+import CollectionsOverview from '../../components/collections-overview/collections-overview.component'
 import { Spring } from 'react-spring/renderprops';
+import { Route } from 'react-router-dom'
+import CollectionPage from '../collection/collection.component'
+
  
 
-class ShopPage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collections: SHOP_DATA
-    }
-  }
-  render() {
-    const {collections} = this.state;
+const ShopPage = ({match}) => {
     return(
-
       <Spring
       from={{ opacity: 0}}
       to={{ opacity: 1 }}
@@ -23,15 +15,16 @@ class ShopPage extends Component {
         {props => (
           <div style={props}>
             <div className='shop-page'>
-              {collections.map(({id, ...otherCollectionProps}) => (
-              <PreviewCollection key={id} {...otherCollectionProps}></PreviewCollection>
-              ))}
+              <Route exact path={`${match.path}`} component={CollectionsOverview} />
+              <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
             </div>
           </div>
         )}
       </Spring>
+
     )
   }
-}
+
+
 
 export default ShopPage
