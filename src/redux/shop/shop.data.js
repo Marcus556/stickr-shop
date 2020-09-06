@@ -6,20 +6,20 @@ const SHOP_DATA = {
     items: [
       {
         id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        name: 'React Sticker',
+        imageUrl: 'https://cdn.shopify.com/s/files/1/0268/5645/6227/products/mockup-4987d30a_345x@2x.jpg?v=1572527668',
         price: 25
       },
       {
         id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        name: 'Css Sticker',
+        imageUrl: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fih1.redbubble.net%2Fimage.30416963.4324%2Fsticker%2C375x360.u7.png&f=1&nofb=1',
         price: 18
       },
       {
         id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+        name: 'HTML5 Sticker',
+        imageUrl: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0104%2F8882%2Fproducts%2Fhtml5-reusable-macbook-sticker-600x600_grande.jpg%3Fv%3D1563269077&f=1&nofb=1',
         price: 35
       },
       {
@@ -68,25 +68,25 @@ const SHOP_DATA = {
       {
         id: 10,
         name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+        imageUrl: 'https://i.ibb.co/5K4ckkX/2020-09-05-20-38-22-Window.png',
         price: 220
       },
       {
         id: 11,
         name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
+        imageUrl: 'https://i.ibb.co/qm5L5rF/2020-09-05-20-37-41-Window.png',
         price: 280
       },
       {
         id: 12,
         name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
+        imageUrl: 'https://i.ibb.co/vJmyGxD/2020-09-05-20-37-32-Window.png',
         price: 110
       },
       {
         id: 13,
         name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+        imageUrl: 'https://i.ibb.co/4txFFVD/2020-09-05-20-37-25-Window.png',
         price: 160
       },
       {

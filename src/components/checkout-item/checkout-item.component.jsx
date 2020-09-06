@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 
 const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
   const { imageUrl, name, quantity, price} = cartItem
+  const total = price * quantity
   return (
     <div className='checkout-item'>
       <div className='image-container'>
@@ -16,7 +17,7 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
         <span className='value'>{quantity}</span>
         <div className='arrow' onClick={() => addItem(cartItem)}>&#10095;</div>
       </span>
-      <span className='price'>{price} / {{price}*{quantity}}</span>
+      <span className='price'>${price} {quantity > 1 ? `/ $${total}` : null}</span>
       <div className='remove-button' onClick={() => clearItem(cartItem)}>&#10005;</div>
     </div>
   )

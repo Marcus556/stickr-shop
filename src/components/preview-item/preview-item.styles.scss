@@ -5,13 +5,20 @@
   height: 350px;
   align-items: center;
   position: relative;
+  padding: 8px 8px 16px 8px;
+  background: url(../../img/sticker-border.png); 
+  background-size: 22vw;
 
   .background-image {
     width: 100%;
     height: 95%;
-    background-size: cover;
+    background-size: 15vw;
+    background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 5px;
+    background-color: white;
+    // background-size: cover;
+    // background-position: center;
+
   }
   
   .custom-button {
@@ -29,6 +36,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    padding: 5px 0;
 
     .name {
       width: 90%;
@@ -38,6 +46,7 @@
     .price {
       width: 10%;
     }
+
   }
   &:hover {
     .background-image {
