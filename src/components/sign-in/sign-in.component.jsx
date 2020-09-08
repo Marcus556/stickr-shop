@@ -51,6 +51,7 @@ export default class signIn extends Component {
             value={this.state.email}
             label='email'
             required
+
           />        
           <FormInput
             name='password'
@@ -59,6 +60,7 @@ export default class signIn extends Component {
             handleChange={this.handleChange}
             label='password'
             required
+            auto-complete='current-password'
           /> 
           <div className='error-message'>
           <span>{this.state.errorMsg}</span>

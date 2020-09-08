@@ -82,7 +82,7 @@ export default class SignUp extends Component {
         value={confirmedPassword}
         onChange={this.handleChange}
         label='Confirm the password'
-        required  
+        required 
         />
         <div className='error-message'>
           <span>{this.state.errorMsg}</span>
